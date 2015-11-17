@@ -1,6 +1,20 @@
-// FETCHR.js
-//    simplest ever XHR utility abiding by promises, timeout
-//    and cancellation directives
+/*
+ *    FETCHR.js ::
+ *    Simplest ever XHR utility abiding by promises, timeout
+ *    and cancellation directives. Call the default export
+ *    providing a URL, and optionally, a timeout limit and
+ *    demand for JSON style response data.
+ *
+ *    Use ::
+ *    fetchr( "http://api.acme.international/fortune", 4500, true ).then(
+ *       function ( data ) {
+ *           console.log( 'Truth:', data );
+ *       },
+ *       function ( reason ) {
+ *           console.error( 'Something went horribly wrong', reason );
+ *       });
+ *
+ */
 
 const identity = "Fetchr 0.1";
 
@@ -44,10 +58,7 @@ function fetchr( sURL, timeoutDuration, returnJSON ) {
                 // If client specified JSON via @returnJSON,
                 // attempt to parse the response into an object
                 var payload = isJson ? JSON.parse( this.responseText ) : this.responseText;
-                resolve( {
-                    "result": "OK",
-                    "payload": payload
-                } )
+                resolve( payload )
             } );
 
             request.addEventListener( "timeout", function( e ) {
