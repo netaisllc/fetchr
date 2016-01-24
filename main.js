@@ -3,8 +3,10 @@
 import fetchr from './fetchr';
 
 var el = document.querySelector( "#app" );
+var fortune = "http://api.acme.international/fortune";
+var doppio = "http://dgtest4.elasticbeanstalk.com/SimpleServletProject/GlobalDocsList";
 
-fetchr( "http://api.acme.international/fortune", 1250, true ).then(
+fetchr( doppio, 500, true ).then(
     function ( data ) {
         console.log( 'Truth: ', data );
         el.innerHTML = "All done OK";

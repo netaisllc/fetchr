@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/",
+  baseURL: "/fetchr",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
