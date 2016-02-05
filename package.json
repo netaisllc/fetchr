@@ -1,6 +1,6 @@
 {
   "name": "fetchr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small XHR library with promises, timeout and cancellation.",
   "main": "index.js",
   "scripts": {

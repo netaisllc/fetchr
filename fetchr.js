@@ -31,7 +31,7 @@ export function fetchr( sURL, method, errMessage, timeoutDuration, returnJSON ) 
      *
      */
      
-    const identity = "Fetchr 0.3";
+    const identity = "Fetchr 1.0.1";
      
     var promiseEnabled = function() {
         // more here
